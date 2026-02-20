@@ -178,17 +178,13 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <code>Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?</code>
 
     <div class="qs-action">
-      <a class="btn small" href="https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo"
-	target="_blank" rel="noopener"
-         onclick="
-           navigator.clipboard.writeText('Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?');
-           showToast();
-           gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_most_erkeztem'});
-           window.open('https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo','_blank');
-           return false;">
-        Megnyitás ezzel a kérdéssel
-      </a>
-    </div>
+  <a class="btn small"
+     href="https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo"
+     target="_blank" rel="noopener"
+     onclick="copyPrompt('Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?'); showToast(); gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_most_erkeztem'});">
+    Megnyitás ezzel a kérdéssel
+  </a>
+</div>
   </div>
 
   <div class="feature">

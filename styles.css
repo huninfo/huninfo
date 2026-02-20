@@ -1,0 +1,208 @@
+/* HunInfó static landing – minimal modern style */
+:root{
+  --bg:#0b0f17;
+  --card:#101827;
+  --muted:#a9b2c7;
+  --text:#eef2ff;
+  --line:rgba(255,255,255,.08);
+  --accent:#7c3aed;
+  --accent2:#22c55e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background: var(--bg);
+  color:var(--text);
+  position: relative;
+}
+
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(1000px 600px at 20% 0%, rgba(124,58,237,.25), transparent),
+    radial-gradient(900px 500px at 90% 10%, rgba(34,197,94,.18), transparent),
+    var(--bg);
+}
+
+
+a{color:inherit; text-decoration:none}
+.container{max-width:1080px; margin:0 auto; padding:0 20px}
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(140%) blur(10px);
+  background:rgba(11,15,23,.65);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{font-weight:800; letter-spacing:.2px}
+.menu{display:flex; gap:14px}
+.menu a{color:var(--muted); font-weight:600; font-size:14px}
+.menu a:hover{color:var(--text)}
+
+.hero{padding:52px 0 18px}
+.hero-inner{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:start}
+h1{font-size:44px; line-height:1.08; margin:0 0 10px}
+.muted{color:var(--muted)}
+.lead{font-size:18px; color:rgba(238,242,255,.9); line-height:1.6; margin:0 0 18px; max-width:58ch}
+.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 8px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  font-weight:700;
+}
+.btn:hover{border-color:rgba(255,255,255,.18)}
+.btn.primary{
+  border-color:rgba(124,58,237,.45);
+  background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(34,197,94,.65));
+}
+.btn.ghost{color:var(--text)}
+.btn.small{padding:10px 12px; font-size:14px}
+
+.tiny{font-size:13px; line-height:1.5}
+.note{color:rgba(238,242,255,.82)}
+
+.hero-card .card{
+  background:rgba(16,24,39,.72);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+.card-title{font-weight:800; margin-bottom:10px}
+.steps{margin:0 0 12px; padding-left:18px; color:rgba(238,242,255,.88)}
+.steps li{margin:6px 0}
+.pill-row{display:flex; flex-wrap:wrap; gap:8px}
+.pill{
+  font-size:12px;
+  color:rgba(238,242,255,.9);
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.02);
+}
+
+.section{padding:34px 0}
+.section.alt{background:rgba(255,255,255,.02); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+h2{margin:0 0 16px; font-size:28px}
+.grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+.feature{
+  border:1px solid var(--line);
+  background:rgba(16,24,39,.55);
+  border-radius:16px;
+  padding:16px;
+}
+.feature h3{margin:0 0 10px; font-size:16px}
+.feature ul{margin:0; padding-left:18px; color:rgba(238,242,255,.88)}
+.feature li{margin:6px 0}
+
+.how{display:grid; grid-template-columns:1.2fr .8fr; gap:14px}
+.callout{
+  border:1px solid rgba(34,197,94,.35);
+  background:rgba(34,197,94,.08);
+  border-radius:16px;
+  padding:16px;
+}
+.callout-title{font-weight:800; margin-bottom:8px}
+
+.footer{padding:26px 0}
+.footer-inner{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  border-top:none; padding-top:18px;
+}
+.footer a{color:var(--muted)}
+.footer a:hover{color:var(--text)}
+
+@media (max-width: 900px){
+  .hero-inner, .how{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  h1{font-size:36px}
+}
+
+code {
+  display:block;
+  margin-top:8px;
+  padding:10px;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* --- Quick Start (clean) --- */
+#quickstart{
+  background: transparent;
+  border: none;
+  padding-top: 34px;   /* normál section padding */
+  padding-bottom: 34px;
+}
+
+/* code block a kártyákban */
+#quickstart code{
+  display:block;
+  margin-top:8px;
+  padding:10px;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* --- Footer (clean) --- */
+.footer{
+  padding:26px 0;
+  background: transparent;   /* fontos: ne legyen külön "sáv" */
+}
+
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border-top:none;
+  padding-top:18px;
+}
+
+/* Quick Start gombok rendezése */
+#quickstart .feature{
+  display:flex;
+  flex-direction:column;
+}
+
+#quickstart .feature .qs-action{
+  margin-top:auto;      /* letolja alulra */
+  padding-top:12px;
+}
+
+#toast{
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(16,24,39,0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #eef2ff;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .35s ease;
+  z-index: 9999;
+}
+
+#toast.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+

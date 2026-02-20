@@ -183,7 +183,7 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
        'Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?',
        'quickstart_most_erkeztem'
      );">
-    Megnyitás ezzel a kérdéssel
+    Kérdés másolása és Huninfó megnyitása
   </a>
 </div>
   </div>
@@ -210,16 +210,14 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <code>Lakást keresek Írországban. Milyen dokumentumokra lesz szükségem a jelentkezéshez?</code>
 
     <div class="qs-action">
-      <a class="btn small" href="#"
-         onclick="
-           navigator.clipboard.writeText('Lakást keresek Írországban. Milyen dokumentumokra lesz szükségem a jelentkezéshez?');
-           showToast();
-           gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_lakaskereses'});
-           window.open('https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo','_blank');
-           return false;">
-        Megnyitás ezzel a kérdéssel
-      </a>
-    </div>
+  <a class="btn small" href="#"
+     onclick="return openWithPrompt(
+       'Lakást keresek Írországban. Milyen dokumentumokra lesz szükségem a jelentkezéshez?',
+       'quickstart_most_erkeztem'
+     );">
+    Kérdés másolása és Huninfó megnyitása
+  </a>
+</div>
   </div>
 
   <div class="feature">
@@ -228,16 +226,14 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <code>Családdal költöztem ki Írországba. Milyen támogatásokra lehetünk jogosultak?</code>
 
     <div class="qs-action">
-      <a class="btn small" href="#"
-         onclick="
-           navigator.clipboard.writeText('Családdal költöztem ki Írországba. Milyen támogatásokra lehetünk jogosultak?');
-           showToast();
-           gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_csalad'});
-           window.open('https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo','_blank');
-           return false;">
-        Megnyitás ezzel a kérdéssel
-      </a>
-    </div>
+  <a class="btn small" href="#"
+     onclick="return openWithPrompt(
+       'Családdal költöztem ki Írországba. Milyen támogatásokra lehetünk jogosultak?',
+       'quickstart_most_erkeztem'
+     );">
+    Kérdés másolása és Huninfó megnyitása
+  </a>
+</div>
   </div>
 
   <div class="feature">
@@ -246,16 +242,14 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <code>Segíts ír stílusú önéletrajzot készíteni Customer Service pozícióra.</code>
 
     <div class="qs-action">
-      <a class="btn small" href="#"
-         onclick="
-           navigator.clipboard.writeText('Segíts ír stílusú önéletrajzot készíteni Customer Service pozícióra.');
-           showToast();
-           gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_cv'});
-           window.open('https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo','_blank');
-           return false;">
-        Megnyitás ezzel a kérdéssel
-      </a>
-    </div>
+  <a class="btn small" href="#"
+     onclick="return openWithPrompt(
+       'Segíts ír stílusú önéletrajzot készíteni Customer Service pozícióra.',
+       'quickstart_most_erkeztem'
+     );">
+    Kérdés másolása és Huninfó megnyitása
+  </a>
+</div>
   </div>
 
   <div class="feature">
@@ -263,17 +257,15 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <p class="tiny">Írd be a HunInfónak:</p>
     <code>Sole Trader-ként szeretnék vállalkozni Írországban. Mik az első lépések?</code>
 
-    <div class="qs-action">
-      <a class="btn small" href="#"
-         onclick="
-           navigator.clipboard.writeText('Sole Trader-ként szeretnék vállalkozni Írországban. Mik az első lépések?');
-           showToast();
-           gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_vallalkozas'});
-           window.open('https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo','_blank');
-           return false;">
-        Megnyitás ezzel a kérdéssel
-      </a>
-    </div>
+   <div class="qs-action">
+  <a class="btn small" href="#"
+     onclick="return openWithPrompt(
+       'Sole Trader-ként szeretnék vállalkozni Írországban. Mik az első lépések?',
+       'quickstart_most_erkeztem'
+     );">
+    Kérdés másolása és Huninfó megnyitása
+  </a>
+</div>
   </div>
 
 </div>

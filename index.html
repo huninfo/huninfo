@@ -177,13 +177,14 @@ A gomb megnyitja a HunInfót és kimásolja a kérdést – csak illeszd be (Ctr
     <p class="tiny">Írd be a HunInfónak:</p>
     <code>Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?</code>
 
-    <div class="qs-action">
-  <a class="btn small"
-   href="https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo"
-   target="_blank" rel="noopener"
-   onclick="copyPrompt('...IDE A KÉRDÉS...'); showToast(); gtag('event','huninfo_launch',{event_category:'engagement',event_label:'quickstart_most_erkeztem'});">
-  Megnyitás ezzel a kérdéssel
-</a>
+   <div class="qs-action">
+  <a class="btn small" href="#"
+     onclick="return openWithPrompt(
+       'Most költöztem ki Írországba, nincs PPS számom és munkát keresek. Mi az első 7 dolog amit el kell intéznem?',
+       'quickstart_most_erkeztem'
+     );">
+    Megnyitás ezzel a kérdéssel
+  </a>
 </div>
   </div>
 

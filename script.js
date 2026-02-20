@@ -56,3 +56,33 @@ function fallbackCopy(text) {
 
   document.body.removeChild(ta);
 }
+
+
+const HUNINFO_GPT_URL = "https://chatgpt.com/g/g-6996775e5aec8191ab35389b2d71d82f-huninfo";
+
+window.openWithPrompt = async function(text, label){
+  // 1) Másolás (await -> biztosan lefut)
+  try{
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      fallbackCopy(text);
+    }
+  }catch(e){
+    // ha a modern clipboard tiltva van, fallback
+    fallbackCopy(text);
+  }
+
+  // 2) Toast + GA4
+  try{ window.showToast && window.showToast(); }catch(e){}
+  try{
+    if(typeof gtag === "function"){
+      gtag("event","huninfo_launch",{event_category:"engagement", event_label: label || "quickstart"});
+    }
+  }catch(e){}
+
+  // 3) Új tab nyitása a másolás után
+  window.open(HUNINFO_GPT_URL, "_blank", "noopener");
+
+  return false; // megállítja a href navigációt
+};
